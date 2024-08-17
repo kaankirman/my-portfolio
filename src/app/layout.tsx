@@ -16,7 +16,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="bg-neutral-900">
+        <div className="w-full h-20 rounded-b-lg flex flex-row items-center justify-between px-64 text-white sticky">
+          <h1 className="text-5xl">Kaan <span className="text-purple-200 bg-clip-text drop-shadow-lg" style={{textShadow:"0 0 30px #7e22ce"}}>Kırman</span></h1>
+          <div className="flex flex-row gap-5 text-3xl">
+            <h1 className="transition duration-300 hover:text-purple-600 cursor-pointer">About</h1>
+            <h1 className="transition duration-300 hover:text-purple-600 cursor-pointer">Projects</h1>
+            <h1 className="transition duration-300 hover:text-purple-600 cursor-pointer">Education</h1>
+            <h1 className="transition duration-300 hover:text-purple-600 cursor-pointer">Experience</h1>
+            <h1 className="transition duration-300 hover:text-purple-600 cursor-pointer">Contact</h1>
+          </div>
+        </div>
+        {children}</body>
     </html>
   );
 }
