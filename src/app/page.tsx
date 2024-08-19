@@ -233,7 +233,7 @@ export default function Page() {
                 Developed and maintained websites for clients, ensuring optimal
                 performance and user experience. Collaborated with clients to
                 identify and address issues, ensuring satisfaction and repeat
-                business. Utilized HTML, CSS, JavaScript, React and Next.js to
+                business. Utilized HTML, CSS, TypeScript, React and Next.js to
                 create responsive, user-friendly websites.
               </h1>
             </VerticalTimelineElement>
