@@ -18,7 +18,11 @@ import CustomTimelineElement from "@/components/CustomTimelineElement";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { projectsColOne, projectsColTwo, timelineData } from "./utils/constants";
+import {
+  projectsColOne,
+  projectsColTwo,
+  timelineData,
+} from "./utils/constants";
 
 export default function Page() {
   const variants = {
@@ -30,7 +34,10 @@ export default function Page() {
     },
   };
 
-  const [aboutRef, aboutInView] = useInView({ triggerOnce: false, threshold: 0.1 });
+  const [aboutRef, aboutInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
   const aboutControls = useAnimation();
 
   useEffect(() => {
@@ -41,7 +48,10 @@ export default function Page() {
     }
   }, [aboutInView, aboutControls]);
 
-  const [projectsRef, projectsInView] = useInView({ triggerOnce: false, threshold: 0.1 });
+  const [projectsRef, projectsInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
   const projectsControls = useAnimation();
 
   useEffect(() => {
@@ -52,7 +62,10 @@ export default function Page() {
     }
   }, [projectsInView, projectsControls]);
 
-  const [timelineRef, timelineInView] = useInView({ triggerOnce: false, threshold: 0.1 });
+  const [timelineRef, timelineInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
   const timelineControls = useAnimation();
 
   useEffect(() => {
@@ -63,7 +76,10 @@ export default function Page() {
     }
   }, [timelineInView, timelineControls]);
 
-  const [contactRef, contactInView] = useInView({ triggerOnce: false, threshold: 0.1 });
+  const [contactRef, contactInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
   const contactControls = useAnimation();
 
   useEffect(() => {
@@ -75,9 +91,8 @@ export default function Page() {
   }, [contactInView, contactControls]);
 
   return (
-    <div className="flex flex-col">
+    <div  className="flex flex-col" >
       <motion.div
-        id="about"
         ref={aboutRef}
         initial="hidden"
         animate={aboutControls}
@@ -305,8 +320,8 @@ export default function Page() {
             <video
               src="phone.webm"
               autoPlay
-              loop 
-              muted 
+              loop
+              muted
               className="h-[600px] max-w-none mt-36 ml-24 transform -scale-x-100"
             >
               Your browser does not support the video tag.

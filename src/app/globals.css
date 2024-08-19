@@ -4,22 +4,20 @@
 
 @font-face {
   font-family: 'CustomFont';
-  /* The name you want to use for your font */
   src: url('/font/Jersey10-Regular.ttf') format('truetype');
-  /* Path to your .ttf file */
   font-weight: normal;
-  /* Can be 'bold', 'normal', etc. */
   font-style: normal;
-  /* Can be 'italic', 'normal', etc. */
 }
 
-/* Now you can use the font in your styles */
 body {
   font-family: 'CustomFont', sans-serif;
+  
 }
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #c084fc transparent;
 }
 
 .contact-link-div {

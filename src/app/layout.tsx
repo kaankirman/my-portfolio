@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-neutral-900">
+      <body id="about" className="bg-neutral-900">
         <div className="w-full h-24 rounded-b-lg flex flex-row items-center justify-between px-64 text-white sticky top-0 bg-white bg-opacity-10 backdrop-blur-md border-b shadow-md shadow-purple-400 z-50">
           <h1 className="text-5xl">
             Kaan{" "}
