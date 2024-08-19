@@ -97,7 +97,7 @@ export default function Page() {
         initial="hidden"
         animate={aboutControls}
         variants={variants}
-        className="flex flex-row px-4 items-center h-[calc(100vh-96px)] justify-between max-w-[1280px] self-center"
+        className="flex flex-row px-4 items-center h-[calc(100vh-96px)] justify-between max-w-[1280px] self-center gap-20"
       >
         <div className="flex flex-col w-[800px] min-w-[500px]">
           <h1 className="text-7xl text-white drop-shadow-lg">
