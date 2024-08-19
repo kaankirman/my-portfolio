@@ -72,7 +72,7 @@ export const timelineData = [
   },
   {
     title: "Electrical and Electronics Engineer Intern",
-    subtitle: "İzmir, Turkey",
+    subtitle: "Kocaeli, Turkey",
     date: "Jun 2020 - Aug 2020",
     description:
       "Contributed to the construction of electrical components and lines for five tunnels along a highway. Examined, corrected, and maintained electrical assets in alignment with project requirements.",
