@@ -153,7 +153,7 @@ export default function Page() {
             autoPlay
             loop
             muted
-            className="h-[600px] max-w-none mt-28 transform -scale-x-100"
+            className="h-[550px] max-w-none mt-28 transform -scale-x-100"
           >
             Your browser does not support the video tag.
           </video>
@@ -174,7 +174,7 @@ export default function Page() {
             autoPlay
             loop
             muted
-            className="h-[450px] max-w-none ml-[-180px] mt-28"
+            className="h-[420px] max-w-none ml-[-180px] mt-28"
           >
             Your browser does not support the video tag.
           </video>
@@ -322,7 +322,7 @@ export default function Page() {
               autoPlay
               loop
               muted
-              className="h-[600px] max-w-none mt-36 ml-24 transform -scale-x-100"
+              className="h-[580px] max-w-none mt-36 ml-24 transform -scale-x-100"
             >
               Your browser does not support the video tag.
             </video>
