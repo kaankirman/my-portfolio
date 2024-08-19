@@ -269,7 +269,7 @@ export default function Page() {
             className="text-purple-100 text-5xl"
             style={{ textShadow: "0 0 30px #7e22ce" }}
           >
-            Lets get in touch!
+            Let's get in touch!
           </h2>
           <Link
             href={"https://www.linkedin.com/in/kaan-k%C4%B1rman/"}
