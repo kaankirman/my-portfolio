@@ -145,7 +145,7 @@ export default function Page() {
           </div>
         </div>
         <div
-          className="w-[500px] h-[500px] min-w-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border border-purple-300 rounded-full bg-purple-200"
+          className="w-[500px] h-[500px] min-w-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border border-purple-300 rounded-full bg-transparent"
           style={{ boxShadow: "0 0 100px #9333ea" }}
         >
           <video
@@ -269,7 +269,7 @@ export default function Page() {
             className="text-purple-100 text-5xl"
             style={{ textShadow: "0 0 30px #7e22ce" }}
           >
-            Bother me all you want :)
+            Lets get in touch!
           </h2>
           <Link
             href={"https://www.linkedin.com/in/kaan-k%C4%B1rman/"}
@@ -314,7 +314,7 @@ export default function Page() {
         </div>
         <div className="flex w-1/2 mb-20 items-center justify-center mt-32">
           <div
-            className="w-[500px] h-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border border-purple-300 rounded-full bg-purple-200"
+            className="w-[500px] h-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border border-purple-300 rounded-full bg-transparent"
             style={{ boxShadow: "0 0 100px #9333ea" }}
           >
             <video
