@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,17 +18,33 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-neutral-900">
-        <div className="w-full h-20 rounded-b-lg flex flex-row items-center justify-between px-64 text-white sticky">
-          <h1 className="text-5xl">Kaan <span className="text-purple-200 bg-clip-text drop-shadow-lg" style={{textShadow:"0 0 30px #7e22ce"}}>Kırman</span></h1>
+        <div className="w-full h-24 rounded-b-lg flex flex-row items-center justify-between px-64 text-white sticky top-0 bg-white bg-opacity-10 backdrop-blur-md border-b shadow-md shadow-purple-400 z-50">
+          <h1 className="text-5xl">
+            Kaan{" "}
+            <span
+              className="text-purple-200 bg-clip-text drop-shadow-lg"
+              style={{ textShadow: "0 0 30px #7e22ce" }}
+            >
+              Kırman
+            </span>
+          </h1>
           <div className="flex flex-row gap-5 text-3xl">
-            <h1 className="transition duration-300 hover:text-purple-600 cursor-pointer">About</h1>
-            <h1 className="transition duration-300 hover:text-purple-600 cursor-pointer">Projects</h1>
-            <h1 className="transition duration-300 hover:text-purple-600 cursor-pointer">Education</h1>
-            <h1 className="transition duration-300 hover:text-purple-600 cursor-pointer">Experience</h1>
-            <h1 className="transition duration-300 hover:text-purple-600 cursor-pointer">Contact</h1>
+            <Link href="#about" className="transition duration-300 hover:text-purple-600 cursor-pointer">
+              About
+            </Link>
+            <Link href="#projects" className="transition duration-300 hover:text-purple-600 cursor-pointer">
+              Projects
+            </Link>
+            <Link href="#timeline" className="transition duration-300 hover:text-purple-600 cursor-pointer">
+              Timeline
+            </Link>
+            <Link href="#contact" className="transition duration-300 hover:text-purple-600 cursor-pointer">
+              Contact
+            </Link>
           </div>
         </div>
-        {children}</body>
+        {children}
+      </body>
     </html>
   );
 }

@@ -3,13 +3,106 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'CustomFont'; /* The name you want to use for your font */
-  src: url('/font/Jersey10-Regular.ttf') format('truetype'); /* Path to your .ttf file */
-  font-weight: normal; /* Can be 'bold', 'normal', etc. */
-  font-style: normal;  /* Can be 'italic', 'normal', etc. */
+  font-family: 'CustomFont';
+  /* The name you want to use for your font */
+  src: url('/font/Jersey10-Regular.ttf') format('truetype');
+  /* Path to your .ttf file */
+  font-weight: normal;
+  /* Can be 'bold', 'normal', etc. */
+  font-style: normal;
+  /* Can be 'italic', 'normal', etc. */
 }
 
 /* Now you can use the font in your styles */
 body {
   font-family: 'CustomFont', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.contact-link-div {
+  @apply transition duration-300 hover:scale-[1.03] hover:border-white cursor-pointer;
+}
+
+.text-animation {
+
+  @apply relative;
+}
+
+.text-animation::before {
+  content: "";
+  animation: words 20s infinite;
+}
+
+.text-animation::after {
+  content: '';
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+  width: calc(100%+20px);
+  right: 0px;
+  @apply border-l-2 absolute h-full bg-neutral-900;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #c084fc;
+  }
+}
+
+@keyframes words {
+
+  0%,
+  20% {
+    content: 'Web Developer';
+  }
+
+  21%,
+  40% {
+    content: 'Frontend Developer';
+  }
+
+  41%,
+  60% {
+    content: 'Backend Developer';
+  }
+
+  61%,
+  80% {
+    content: 'UI / UX Designer';
+  }
+
+  81%,
+  100% {
+    content: 'PERN Stack Developer';
+  }
+}
+
+@keyframes typing {
+
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: 100%;
+  }
+
 }

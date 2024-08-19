@@ -40,14 +40,14 @@ export default function Page() {
       </div>
       <div
         className="w-[500px] h-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border border-purple-300 rounded-full bg-purple-400"
-        style={{ boxShadow: "0 0 50px #9333ea" }}
+        style={{ boxShadow: "0 0 100px #9333ea" }}
       >
         <video
           src="waving.webm"
           autoPlay // Optional: To start playing automatically
           loop // Optional: To loop the video
           muted // Optional: To mute the video
-          className="h-full max-w-none ml-[550px]"
+          className="h-[600px] max-w-none ml-[660px] mt-28"
         >
           Your browser does not support the video tag.
         </video>
