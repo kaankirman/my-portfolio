@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Kaan Kırman's Portfolio",
+  icons: [ { rel: "icon", href: "/favicon.ico", url: "/favicon.ico" } ],
 };
 
 export default function RootLayout({
