@@ -18,12 +18,13 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #c084fc transparent;
+  overflow-x: hidden;
 }
 
 @keyframes shadowAnimate {
 
   50% {
-    box-shadow: 0px 0px 50px #9333ea;
+    box-shadow: 0px 0px 30px #a855f7 ;
     opacity: 0.9;
   }
 

@@ -100,10 +100,10 @@ export default function Page() {
       >
         <div className="flex flex-col w-[800px] min-w-[500px]">
           <h1 className="text-7xl text-white drop-shadow-lg">
-            Hello, It's <span className="text-purple-600">Kaan</span>
+            Hello, It's <span className="text-purple-500">Kaan</span>
           </h1>
           <h1 className="text-5xl text-white w-full">
-            I'm a <span className="text-purple-600 text-animation"></span>
+            I'm a <span className="text-purple-500 text-animation"></span>
           </h1>
           <p className="text-white text-2xl mt-6">
             Electrical and Electronics Engineer skilled in web development.
@@ -121,7 +121,7 @@ export default function Page() {
               <FaLinkedin />
             </Link>
             <Link
-              className="hover:text-purple-600 hover:scale-125"
+              className="hover:text-purple-500 hover:scale-125"
               title="Github"
               href={"https://github.com/kaankirman"}
             >
@@ -144,8 +144,8 @@ export default function Page() {
           </div>
         </div>
         <div
-          className="w-[500px] h-[500px] min-w-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border-2 border-purple-300 rounded-full bg-transparent shadow-animation"
-          style={{ boxShadow: "0 0 100px #9333ea" }}
+          className="w-[500px] h-[500px] min-w-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border-2 border-purple-200 rounded-full bg-transparent shadow-animation cursor-default"
+          style={{ boxShadow: "0 0 100px #9333ea  " }}
         >
           <img src="image3.png" className="h-[550px] max-w-none mt-18 ml-10 " />
         </div>
@@ -190,7 +190,7 @@ export default function Page() {
         initial="hidden"
         animate={timelineControls}
         variants={variants}
-        className="flex flex-col w-fit self-center pt-32 "
+        className="flex flex-col w-fit h-fit self-center pt-32 "
       >
         <h1 className="text-7xl text-white ml-20 mb-2">Timeline</h1>
         <div className="flex flex-col w-full">
@@ -198,9 +198,9 @@ export default function Page() {
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               contentStyle={{
-                background: "#9333ea",
+                background: "#9333ea ",
                 color: "#fff",
-                boxShadow: "0 0 50px #9333ea",
+                boxShadow: "0 0 30px #a855f7 ",
               }}
               contentArrowStyle={{ borderRight: "7px solid  #9333ea" }}
               date="Dec 2023 - present"
@@ -240,59 +240,79 @@ export default function Page() {
         initial="hidden"
         animate={contactControls}
         variants={variants}
-        className="h-[calc(100vh-96px)] w-[1280px] flex flex-row self-center pl-14"
+        className="h-fit w-screen flex flex-col self-center items-center mt-20"
       >
-        <div className="flex flex-col w-1/2 gap-10 justify-center">
-          <h1
-            className="text-8xl text-white"
-            style={{ textShadow: "0 0 30px #fff" }}
-          >
-            Contact Me
-          </h1>
-          <h2
-            className="text-purple-100 text-5xl"
-            style={{ textShadow: "0 0 30px #7e22ce" }}
-          >
-            Let's get in touch!
-          </h2>
-          <Link
-            href={"https://www.linkedin.com/in/kaan-k%C4%B1rman/"}
-            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover"
-          >
-            <FaLinkedin className="text-5xl text-blue-600 cursor-pointer" />
-            <h1 className="text-white text-3xl">
-              Connect with me on <span className="text-blue-600">LinkedIn</span>
+        <div
+          className="flex flex-col items-center w-screen h-96 gap-10 pt-10 rounded-t-2xl overflow-hidden border-t-2 border-purple-300"
+          style={{
+            backgroundImage: "url('/neon-city.png')",
+            backgroundSize: "cover",
+            backgroundPosition:"center",
+            boxShadow: "0 0 30px #c084fc  ",
+          }}
+        >
+          <div className="flex flex-col w-[1280px]">
+            <h1
+              className="text-8xl text-white"
+              style={{ textShadow: "0 0 30px #fff" }}
+            >
+              Contact Me
             </h1>
-          </Link>
-          <Link
-            href={"https://github.com/kaankirman"}
-            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover"
-          >
-            <FaGithub className="text-5xl text-purple-600  cursor-pointer" />
-            <h1 className="text-white text-3xl">
-              Check out my <span className="text-purple-600">Projects</span>
-            </h1>
-          </Link>
-          <Link
-            href={"mailto:kaankirman00@gmail.com"}
-            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover"
-          >
-            <FaEnvelopeOpenText className="text-5xl text-red-600  cursor-pointer" />
-            <h1 className="text-white text-3xl">
-              Send me an <span className="text-red-600">e-mail</span>
-            </h1>
-          </Link>
-          <Link
-            href={"/Kaan-Kirman-CV.pdf"}
-            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover"
-          >
-            <FaFileDownload className="text-5xl text-yellow-600  cursor-pointer" />
-            <h1 className="text-white text-3xl">
-              View my <span className="text-yellow-600">CV</span>
-            </h1>
-          </Link>
+            <h2
+              className="text-purple-100 text-5xl"
+              style={{ textShadow: "0 0 30px #7e22ce" }}
+            >
+              Let's get in touch!
+            </h2>
+          </div>
+          <div className="flex flex-row gap-10 justify-center w-[1280px] self-center">
+            <Link
+              href={"https://www.linkedin.com/in/kaan-k%C4%B1rman/"}
+              className="flex flex-row items-center gap-6 w-1/4 border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover bg-white bg-opacity-0 backdrop-blur-md"
+            >
+              <FaLinkedin className="text-5xl text-blue-600 cursor-pointer" />
+              <h1 className="text-white text-lg">
+                Connect with me on{" "}
+                <span className="text-blue-600">LinkedIn</span>
+              </h1>
+            </Link>
+            <Link
+              href={"https://github.com/kaankirman"}
+              className="flex flex-row items-center gap-6 w-1/4 border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover bg-white bg-opacity-0 backdrop-blur-md"
+            >
+              <FaGithub className="text-5xl text-purple-500  cursor-pointer" />
+              <h1 className="text-white text-lg">
+                Check out my <span className="text-purple-500">projects</span>
+              </h1>
+            </Link>
+            <Link
+              href={"mailto:kaankirman00@gmail.com"}
+              className="flex flex-row items-center gap-6 w-1/4 border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover bg-white bg-opacity-0 backdrop-blur-md"
+            >
+              <FaEnvelopeOpenText className="text-5xl text-red-600  cursor-pointer" />
+              <h1 className="text-white text-lg">
+                Send me an <span className="text-red-600">e-mail</span>
+              </h1>
+            </Link>
+            <Link
+              href={"/Kaan-Kirman-CV.pdf"}
+              className="flex flex-row items-center gap-6 w-1/4 border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover bg-white bg-opacity-0 backdrop-blur-md"
+            >
+              <FaFileDownload className="text-5xl text-yellow-600  cursor-pointer" />
+              <h1 className="text-white text-lg">
+                View my <span className="text-yellow-600">CV</span>
+              </h1>
+            </Link>
+          </div>
         </div>
-        <div className="flex w-1/2 mb-20 items-center justify-center mt-32">
+
+        {/* <img
+          src="neon-city.png"
+          alt="neon city"
+          className="w-screen object-cover h-96"
+        ></img> */}
+
+        {/* <div className="flex w-1/2 mb-20 items-center justify-center mt-32">
           <div
             className="w-[500px] h-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border-2 border-purple-300 rounded-full bg-transparent shadow-animation "
             style={{ boxShadow: "0 0 100px #9333ea" }}
@@ -302,7 +322,7 @@ export default function Page() {
               className="h-[580px] max-w-none mt-36 ml-10 "
             />
           </div>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   );

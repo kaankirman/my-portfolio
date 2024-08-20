@@ -17,7 +17,7 @@ const CustomTimelineElement: React.FC<CustomTimelineElementProps> = ({
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
-      contentStyle={{boxShadow:"0 0 50px #fff"}}
+      contentStyle={{boxShadow:"0 0 30px #fff"}}
       date={date}
       dateClassName="text-white"
       iconStyle={{ background: "#c084fc", color: "#fff" }}

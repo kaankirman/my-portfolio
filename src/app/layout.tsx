@@ -17,13 +17,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="about" className="bg-neutral-900">
-        <div className="w-full h-24 rounded-b-lg flex items-center justify-center text-white sticky top-0 bg-white bg-opacity-10 backdrop-blur-md border-b shadow-md shadow-purple-400 z-50">
+        <div className="w-full h-24 rounded-b-lg flex items-center justify-center text-white sticky top-0 bg-white bg-opacity-10 backdrop-blur-md border-b-2 border-purple-200 shadow-lg shadow-purple-400 z-50">
           <div className="flex flex-row w-[1280px] items-center justify-between px-4">
             <h1 className="text-5xl hover:animate-pulse cursor-default">
               Kaan{" "}
               <span
                 className="text-purple-200 bg-clip-text drop-shadow-lg"
-                style={{ textShadow: "0 0 30px #7e22ce" }}
+                style={{ textShadow: "0 0 30px #a855f7 " }}
               >
                 Kırman
               </span>
