@@ -96,7 +96,7 @@ export default function Page() {
         initial="hidden"
         animate={aboutControls}
         variants={variants}
-        className="flex flex-row px-4 items-center h-[calc(100vh-196px)] pt-32 justify-between max-w-[1280px] self-center gap-20 "
+        className="flex flex-row px-4 items-center h-[calc(100vh-96px)] justify-between max-w-[1280px] self-center gap-20 "
       >
         <div className="flex flex-col w-[800px] min-w-[500px]">
           <h1 className="text-7xl text-white drop-shadow-lg">
@@ -157,7 +157,7 @@ export default function Page() {
         initial="hidden"
         animate={projectsControls}
         variants={variants}
-        className="flex flex-col self-center max-w-[1280px] pt-32 h-[calc(100vh-96px)] mb-60"
+        className="flex flex-col self-center max-w-[1280px] h-[calc(100vh-96px)] pt-32"
       >
         <h1 className="text-7xl ml-8 text-white mb-8">Projects</h1>
         <div className="flex flex-row gap-8">
@@ -190,7 +190,7 @@ export default function Page() {
         initial="hidden"
         animate={timelineControls}
         variants={variants}
-        className="flex flex-col w-fit self-center pt-32 mb-40"
+        className="flex flex-col w-fit self-center pt-32 "
       >
         <h1 className="text-7xl text-white ml-20 mb-2">Timeline</h1>
         <div className="flex flex-col w-full">
