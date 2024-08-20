@@ -12,8 +12,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data, name,url }) => {
   return (
     <Link
       href={url}
-      className="flex flex-row rounded-xl overflow-hidden w-full border-2 transition duration-300 border-purple-300 items-center px-4 gap-7 cursor-pointer hover:border-white hover:scale-105"
-      style={{ boxShadow: "0 0 50px #9333ea" }}
+      className="flex flex-row rounded-xl overflow-hidden w-[500px] border-2 transition duration-300 border-purple-300 items-center px-4 gap-7 cursor-pointer hover:border-white hover:scale-110 button-hover"
     >
       <Lottie
         options={{

@@ -11,7 +11,7 @@
 
 body {
   font-family: 'CustomFont', sans-serif;
-  
+
 }
 
 html {
@@ -20,8 +20,53 @@ html {
   scrollbar-color: #c084fc transparent;
 }
 
+@keyframes shadowAnimate {
+
+  50% {
+    box-shadow: 0px 0px 50px #9333ea;
+    opacity: 0.9;
+  }
+
+}
+
+@keyframes shadowAnimateWhite {
+
+  50% {
+    box-shadow: 0px 0px 20px #fff;
+    opacity: 0.9;
+  }
+
+}
+
+@keyframes customBounce {
+  50% {
+    transform: translateY(30px); 
+  }
+}
+.shadow-animation-purple {
+  animation: shadowAnimate 3s infinite ;
+}
+
+.shadow-animation {
+  animation: shadowAnimate 3s infinite ;
+}
+
+.shadow-animation:hover {
+  animation: shadowAnimate 3s infinite ,customBounce 3s infinite;
+}
+
+.button-hover {
+  box-shadow: 0px 0px 15px white;
+}
+
+.button-hover:hover {
+  box-shadow: 0px 0px 3px white;
+}
+
+
+
 .contact-link-div {
-  @apply transition duration-300 hover:scale-[1.03] hover:border-white cursor-pointer;
+  @apply transition duration-300 hover:scale-[1.1] hover:border-white cursor-pointer;
 }
 
 .text-animation {

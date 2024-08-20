@@ -26,11 +26,10 @@ import {
 
 export default function Page() {
   const variants = {
-    hidden: { opacity: 0, y: 100 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: { duration: 1, ease: "easeOut" },
     },
   };
 
@@ -91,13 +90,13 @@ export default function Page() {
   }, [contactInView, contactControls]);
 
   return (
-    <div  className="flex flex-col" >
+    <div className="flex flex-col">
       <motion.div
         ref={aboutRef}
         initial="hidden"
         animate={aboutControls}
         variants={variants}
-        className="flex flex-row px-4 items-center h-[calc(100vh-96px)] justify-between max-w-[1280px] self-center gap-20"
+        className="flex flex-row px-4 items-center h-[calc(100vh-196px)] pt-32 justify-between max-w-[1280px] self-center gap-20 "
       >
         <div className="flex flex-col w-[800px] min-w-[500px]">
           <h1 className="text-7xl text-white drop-shadow-lg">
@@ -145,18 +144,10 @@ export default function Page() {
           </div>
         </div>
         <div
-          className="w-[500px] h-[500px] min-w-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border border-purple-300 rounded-full bg-transparent"
+          className="w-[500px] h-[500px] min-w-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border-2 border-purple-300 rounded-full bg-transparent shadow-animation"
           style={{ boxShadow: "0 0 100px #9333ea" }}
         >
-          <video
-            src="talking.webm"
-            autoPlay
-            loop
-            muted
-            className="h-[550px] max-w-none mt-28 transform -scale-x-100"
-          >
-            Your browser does not support the video tag.
-          </video>
+          <img src="image3.png" className="h-[550px] max-w-none mt-18 ml-10 " />
         </div>
       </motion.div>
 
@@ -166,38 +157,30 @@ export default function Page() {
         initial="hidden"
         animate={projectsControls}
         variants={variants}
-        className="flex flex-row items-center self-center max-w-[1280px] px-4 h-screen"
+        className="flex flex-col self-center max-w-[1280px] pt-32 h-[calc(100vh-96px)] mb-60"
       >
-        <div className="w-1/3 mb-20 mr-16">
-          <video
-            src="working.webm"
-            autoPlay
-            loop
-            muted
-            className="h-[420px] max-w-none ml-[-180px] mt-28"
-          >
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div className="flex flex-col w-1/3 gap-10 items-center ">
-          {projectsColOne.map((project) => (
-            <ProjectCard
-              key={project.name}
-              name={project.name}
-              data={project.data}
-              url={project.url}
-            />
-          ))}
-        </div>
-        <div className="flex flex-col w-1/3 gap-10 items-center px-10">
-          {projectsColTwo.map((project) => (
-            <ProjectCard
-              key={project.name}
-              name={project.name}
-              data={project.data}
-              url={project.url}
-            />
-          ))}
+        <h1 className="text-7xl ml-8 text-white mb-8">Projects</h1>
+        <div className="flex flex-row gap-8">
+          <div className="flex flex-col w-1/2 gap-20 items-center ">
+            {projectsColOne.map((project) => (
+              <ProjectCard
+                key={project.name}
+                name={project.name}
+                data={project.data}
+                url={project.url}
+              />
+            ))}
+          </div>
+          <div className="flex flex-col w-1/2 gap-20 items-center px-10">
+            {projectsColTwo.map((project) => (
+              <ProjectCard
+                key={project.name}
+                name={project.name}
+                data={project.data}
+                url={project.url}
+              />
+            ))}
+          </div>
         </div>
       </motion.div>
 
@@ -207,8 +190,9 @@ export default function Page() {
         initial="hidden"
         animate={timelineControls}
         variants={variants}
-        className="flex flex-row"
+        className="flex flex-col w-fit self-center pt-32 mb-40"
       >
+        <h1 className="text-7xl text-white ml-20 mb-2">Timeline</h1>
         <div className="flex flex-col w-full">
           <VerticalTimeline animate={false}>
             <VerticalTimelineElement
@@ -256,7 +240,7 @@ export default function Page() {
         initial="hidden"
         animate={contactControls}
         variants={variants}
-        className="h-screen w-[1280px] flex flex-row self-center pl-14"
+        className="h-[calc(100vh-96px)] w-[1280px] flex flex-row self-center pl-14"
       >
         <div className="flex flex-col w-1/2 gap-10 justify-center">
           <h1
@@ -273,8 +257,7 @@ export default function Page() {
           </h2>
           <Link
             href={"https://www.linkedin.com/in/kaan-k%C4%B1rman/"}
-            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-blue-300 shadow-lg contact-link-div"
-            style={{ boxShadow: "0 0 15px #2563eb " }}
+            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover"
           >
             <FaLinkedin className="text-5xl text-blue-600 cursor-pointer" />
             <h1 className="text-white text-3xl">
@@ -283,8 +266,7 @@ export default function Page() {
           </Link>
           <Link
             href={"https://github.com/kaankirman"}
-            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-purple-300 shadow-lg contact-link-div"
-            style={{ boxShadow: "0 0 15px #9333ea " }}
+            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover"
           >
             <FaGithub className="text-5xl text-purple-600  cursor-pointer" />
             <h1 className="text-white text-3xl">
@@ -293,8 +275,7 @@ export default function Page() {
           </Link>
           <Link
             href={"mailto:kaankirman00@gmail.com"}
-            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-red-300 shadow-lg contact-link-div"
-            style={{ boxShadow: "0 0 15px #dc2626 " }}
+            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover"
           >
             <FaEnvelopeOpenText className="text-5xl text-red-600  cursor-pointer" />
             <h1 className="text-white text-3xl">
@@ -303,8 +284,7 @@ export default function Page() {
           </Link>
           <Link
             href={"/Kaan-Kirman-CV.pdf"}
-            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-yellow-300 shadow-lg contact-link-div"
-            style={{ boxShadow: "0 0 15px #ca8a04 " }}
+            className="flex flex-row items-center gap-6 w-fit border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover"
           >
             <FaFileDownload className="text-5xl text-yellow-600  cursor-pointer" />
             <h1 className="text-white text-3xl">
@@ -314,18 +294,13 @@ export default function Page() {
         </div>
         <div className="flex w-1/2 mb-20 items-center justify-center mt-32">
           <div
-            className="w-[500px] h-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border border-purple-300 rounded-full bg-transparent"
+            className="w-[500px] h-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border-2 border-purple-300 rounded-full bg-transparent shadow-animation "
             style={{ boxShadow: "0 0 100px #9333ea" }}
           >
-            <video
-              src="phone.webm"
-              autoPlay
-              loop
-              muted
-              className="h-[580px] max-w-none mt-36 ml-24 transform -scale-x-100"
-            >
-              Your browser does not support the video tag.
-            </video>
+            <img
+              src="phone-img.png"
+              className="h-[580px] max-w-none mt-36 ml-10 "
+            />
           </div>
         </div>
       </motion.div>
