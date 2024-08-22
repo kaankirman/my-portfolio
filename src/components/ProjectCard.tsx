@@ -5,15 +5,18 @@ import Lottie from "react-lottie";
 interface ProjectCardProps {
   data: any;
   name: string;
-  url: string;
+  web: string;
+  mobile?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ data, name,url }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({
+  data,
+  name,
+  web,
+  mobile,
+}) => {
   return (
-    <Link
-      href={url}
-      className="flex flex-row rounded-xl overflow-hidden w-[500px] border-2 transition duration-300 border-purple-300 items-center px-4 gap-7 cursor-pointer hover:border-white hover:scale-110 button-hover"
-    >
+    <div className="flex flex-row rounded-xl overflow-hidden w-[500px] border-2 transition duration-300 border-purple-300 items-center px-4 gap-7 hover:border-white hover:scale-110 button-hover">
       <Lottie
         options={{
           loop: true,
@@ -27,7 +30,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data, name,url }) => {
         speed={0.5}
         height={130}
         width={200}
+        style={{ cursor:"default"}}
       />
+      <div className="flex flex-col">
+        <Link href={web} className="text-3xl text-white cursor-pointer transition duration-300 hover:text-purple-600 hover:translate-x-1 animate-pulse" >Web</Link>
+        {mobile && <Link href={mobile} className="text-3xl text-white cursor-pointer transition duration-300 hover:text-purple-600 hover:translate-x-1 animate-pulse">Mobile</Link>}
+      </div>
       <div
         className="w-[2px] h-16 bg-white"
         style={{ boxShadow: "0 0 10px #9333ea" }}
@@ -40,7 +48,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ data, name,url }) => {
       >
         {name}
       </h1>
-    </Link>
+    </div>
   );
 };
 

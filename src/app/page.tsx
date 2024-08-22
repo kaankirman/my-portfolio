@@ -167,7 +167,7 @@ export default function Page() {
                 key={project.name}
                 name={project.name}
                 data={project.data}
-                url={project.url}
+                web={project.web}
               />
             ))}
           </div>
@@ -177,7 +177,8 @@ export default function Page() {
                 key={project.name}
                 name={project.name}
                 data={project.data}
-                url={project.url}
+                web={project.web}
+                mobile={project.mobile}
               />
             ))}
           </div>

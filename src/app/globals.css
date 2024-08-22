@@ -24,7 +24,7 @@ html {
 @keyframes shadowAnimate {
 
   50% {
-    box-shadow: 0px 0px 30px #a855f7 ;
+    box-shadow: 0px 0px 30px #a855f7;
     opacity: 0.9;
   }
 
@@ -41,19 +41,20 @@ html {
 
 @keyframes customBounce {
   50% {
-    transform: translateY(30px); 
+    transform: translateY(30px);
   }
 }
+
 .shadow-animation-purple {
-  animation: shadowAnimate 3s infinite ;
+  animation: shadowAnimate 3s infinite;
 }
 
 .shadow-animation {
-  animation: shadowAnimate 3s infinite ;
+  animation: shadowAnimate 3s infinite;
 }
 
 .shadow-animation:hover {
-  animation: shadowAnimate 3s infinite ,customBounce 3s infinite;
+  animation: shadowAnimate 3s infinite, customBounce 3s infinite;
 }
 
 .button-hover {
@@ -63,6 +64,7 @@ html {
 .button-hover:hover {
   box-shadow: 0px 0px 3px white;
 }
+
 
 
 

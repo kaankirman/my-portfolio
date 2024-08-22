@@ -9,17 +9,17 @@ export const projectsColOne = [
   {
     name: "Dinamik Rent a Car",
     data: dinamikLottie,
-    url: "https://dinamikrentacar.vercel.app/",
+    web: "https://dinamikrentacar.vercel.app/",
   },
   {
     name: "Long Term Car Rent",
     data: uzunDonemLottie,
-    url: "https://uzundonemkirala.vercel.app/",
+    web: "https://uzundonemkirala.vercel.app/",
   },
   {
     name: "Flanssan Metals",
     data: flanssanLottie,
-    url: "https://flanssan-kaan-kirmans-projects.vercel.app/",
+    web: "https://flanssan-kaan-kirmans-projects.vercel.app/",
   },
 ];
 
@@ -27,17 +27,18 @@ export const projectsColTwo = [
   {
     name: "Get 2 Connect",
     data: messageLottie,
-    url: "https://github.com/kaankirman/Whatsapp-Clone",
+    web: "https://github.com/kaankirman/Whatsapp-Clone",
   },
   {
     name: "Where 2 Be",
     data: worldLottie,
-    url: "https://github.com/kaankirman/Where2beWebVersion",
+    web: "https://github.com/kaankirman/Where2beWebVersion",
+    mobile:"https://github.com/kaankirman/Where2beFinal"
   },
   {
     name: "Thought Share",
     data: thoughtShareLottie,
-    url: "https://github.com/kaankirman/thoughtshare",
+    web: "https://github.com/kaankirman/thoughtshare",
   },
 ];
 
