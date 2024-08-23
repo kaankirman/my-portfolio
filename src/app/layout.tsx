@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Kaan Kırman's Portfolio",
-  icons: [ { rel: "icon", href: "/favicon.ico", url: "/favicon.ico" } ],
+  icons: [{ rel: "icon", href: "/favicon.ico", url: "/favicon.ico" }],
 };
 
 export default function RootLayout({
@@ -18,40 +18,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="about" className="bg-neutral-900">
-        <div className="w-full h-24 rounded-b-lg flex items-center justify-center text-white sticky top-0 bg-white bg-opacity-10 backdrop-blur-md border-b-2 border-purple-200 shadow-lg shadow-purple-400 z-50">
-          <div className="flex flex-row w-[1280px] items-center justify-between px-4">
-            <h1 className="text-5xl hover:animate-pulse cursor-default">
+        <div className="header-container">
+          <div className="header-content">
+            <h1 className="header-title">
               Kaan{" "}
               <span
-                className="text-purple-200 bg-clip-text drop-shadow-lg"
+                className="header-title-span"
                 style={{ textShadow: "0 0 30px #a855f7 " }}
               >
                 Kırman
               </span>
             </h1>
-            <div className="flex flex-row gap-5 text-3xl ">
-              <Link
-                href="#about"
-                className="transition duration-300 hover:text-purple-600 cursor-pointer hover:-translate-y-1"
-              >
+            <div className="header-links">
+              <Link href="#about" className="header-link">
                 About
               </Link>
-              <Link
-                href="#projects"
-                className="transition duration-300 hover:text-purple-600 cursor-pointer hover:-translate-y-1"
-              >
+              <Link href="#projects" className="header-link">
                 Projects
               </Link>
-              <Link
-                href="#timeline"
-                className="transition duration-300 hover:text-purple-600 cursor-pointer hover:-translate-y-1"
-              >
+              <Link href="#timeline" className="header-link">
                 Timeline
               </Link>
-              <Link
-                href="#contact"
-                className="transition duration-300 hover:text-purple-600 cursor-pointer hover:-translate-y-1"
-              >
+              <Link href="#contact" className="header-link">
                 Contact
               </Link>
             </div>

@@ -90,52 +90,52 @@ export default function Page() {
   }, [contactInView, contactControls]);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex-col-container">
       <motion.div
         ref={aboutRef}
         initial="hidden"
         animate={aboutControls}
         variants={variants}
-        className="flex flex-row px-4 items-center h-[calc(100vh-96px)] justify-between max-w-[1280px] self-center gap-20 "
+        className="flex-row-container"
       >
-        <div className="flex flex-col w-[800px] min-w-[500px]">
-          <h1 className="text-7xl text-white drop-shadow-lg">
+        <div className="flex-col-content">
+          <h1 className="text-large-white">
             Hello, It's <span className="text-purple-500">Kaan</span>
           </h1>
-          <h1 className="text-5xl text-white w-full">
+          <h1 className="text-medium-white">
             I'm a <span className="text-purple-500 text-animation"></span>
           </h1>
-          <p className="text-white text-2xl mt-6">
+          <p className="text-small-white">
             Electrical and Electronics Engineer skilled in web development.
             Actively involved in full-stack development using TypeScript,
             Next.js, React, HTML, Tailwind CSS, Node.js, and PostgreSQL. Quick
             learner, adaptable to evolving technologies, and committed to
             delivering efficient solutions in dynamic environments.
           </p>
-          <div className="flex flex-row *:transition *:duration-300 *:text-3xl *:text-white gap-4 mt-5">
+          <div className="flex-row-icons">
             <Link
-              className="hover:text-blue-600 hover:scale-125"
+              className="icon-link icon-link-linkedin"
               title="LinkedIn"
               href={"https://www.linkedin.com/in/kaan-k%C4%B1rman/"}
             >
               <FaLinkedin />
             </Link>
             <Link
-              className="hover:text-purple-500 hover:scale-125"
+              className="icon-link icon-link-github"
               title="Github"
               href={"https://github.com/kaankirman"}
             >
               <FaGithub />
             </Link>
             <Link
-              className="hover:text-pink-700 hover:scale-125"
+              className="icon-link icon-link-instagram"
               title="Instagram"
               href={"https://www.instagram.com/krmnkaan/"}
             >
               <FaInstagram />
             </Link>
             <Link
-              className="hover:text-yellow-600 hover:scale-125"
+              className="icon-link icon-link-resume"
               title="Resume"
               href={"/Kaan-Kirman-CV.pdf"}
             >
@@ -144,10 +144,10 @@ export default function Page() {
           </div>
         </div>
         <div
-          className="w-[500px] h-[500px] min-w-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border-2 border-purple-200 rounded-full bg-transparent shadow-animation cursor-default"
-          style={{ boxShadow: "0 0 100px #9333ea  " }}
+          className="image-container"
+          style={{ boxShadow: "0 0 100px #9333ea" }}
         >
-          <img src="image3.png" className="h-[550px] max-w-none mt-18 ml-10 " />
+          <img src="image3.png" className="image" />
         </div>
       </motion.div>
 
@@ -157,11 +157,11 @@ export default function Page() {
         initial="hidden"
         animate={projectsControls}
         variants={variants}
-        className="flex flex-col self-center max-w-[1280px] h-[calc(100vh-96px)] pt-32"
+        className="projects-container"
       >
-        <h1 className="text-7xl ml-8 text-white mb-8">Projects</h1>
-        <div className="flex flex-row gap-8">
-          <div className="flex flex-col w-1/2 gap-20 items-center ">
+        <h1 className="projects-title">Projects</h1>
+        <div className="project-card-div">
+          <div className="projects-column">
             {projectsColOne.map((project) => (
               <ProjectCard
                 key={project.name}
@@ -171,7 +171,7 @@ export default function Page() {
               />
             ))}
           </div>
-          <div className="flex flex-col w-1/2 gap-20 items-center px-10">
+          <div className="projects-column-padded">
             {projectsColTwo.map((project) => (
               <ProjectCard
                 key={project.name}
@@ -191,17 +191,17 @@ export default function Page() {
         initial="hidden"
         animate={timelineControls}
         variants={variants}
-        className="flex flex-col w-fit h-fit self-center pt-32 "
+        className="timeline-container"
       >
-        <h1 className="text-7xl text-white ml-20 mb-2">Timeline</h1>
+        <h1 className="timeline-title">Timeline</h1>
         <div className="flex flex-col w-full">
           <VerticalTimeline animate={false}>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               contentStyle={{
-                background: "#9333ea ",
+                background: "#9333ea",
                 color: "#fff",
-                boxShadow: "0 0 30px #a855f7 ",
+                boxShadow: "0 0 30px #a855f7",
               }}
               contentArrowStyle={{ borderRight: "7px solid  #9333ea" }}
               date="Dec 2023 - present"
@@ -241,89 +241,61 @@ export default function Page() {
         initial="hidden"
         animate={contactControls}
         variants={variants}
-        className="h-fit w-screen flex flex-col self-center items-center mt-20"
+        className="contact-container"
       >
         <div
-          className="flex flex-col items-center w-screen h-96 gap-10 pt-10 rounded-t-2xl overflow-hidden border-t-2 border-purple-300"
+          className="contact-content"
           style={{
             backgroundImage: "url('/neon-city.png')",
             backgroundSize: "cover",
-            backgroundPosition:"center",
-            boxShadow: "0 0 30px #c084fc  ",
+            backgroundPosition: "center",
+            boxShadow: "0 0 30px #c084fc",
           }}
         >
-          <div className="flex flex-col w-[1280px]">
-            <h1
-              className="text-8xl text-white"
-              style={{ textShadow: "0 0 30px #fff" }}
-            >
-              Contact Me
-            </h1>
-            <h2
-              className="text-purple-100 text-5xl"
-              style={{ textShadow: "0 0 30px #7e22ce" }}
-            >
-              Let's get in touch!
-            </h2>
+          <div className="contact-header">
+            <h1 className="contact-title">Contact Me</h1>
+            <h2 className="contact-subtitle">Let's get in touch!</h2>
           </div>
-          <div className="flex flex-row gap-10 justify-center w-[1280px] self-center">
+          <div className="contact-links">
             <Link
               href={"https://www.linkedin.com/in/kaan-k%C4%B1rman/"}
-              className="flex flex-row items-center gap-6 w-1/4 border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover bg-white bg-opacity-0 backdrop-blur-md"
+              className="contact-link"
             >
-              <FaLinkedin className="text-5xl text-blue-600 cursor-pointer" />
-              <h1 className="text-white text-lg">
+              <FaLinkedin className="contact-link-linkedin" />
+              <h1 className="contact-link-text">
                 Connect with me on{" "}
-                <span className="text-blue-600">LinkedIn</span>
+                <span className="contact-link-text-linkedin">LinkedIn</span>
               </h1>
             </Link>
             <Link
               href={"https://github.com/kaankirman"}
-              className="flex flex-row items-center gap-6 w-1/4 border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover bg-white bg-opacity-0 backdrop-blur-md"
+              className="contact-link"
             >
-              <FaGithub className="text-5xl text-purple-500  cursor-pointer" />
-              <h1 className="text-white text-lg">
-                Check out my <span className="text-purple-500">projects</span>
+              <FaGithub className="contact-link-github" />
+              <h1 className="contact-link-text">
+                Check out my <span className="contact-link-text-github">projects</span>
               </h1>
             </Link>
             <Link
               href={"mailto:kaankirman00@gmail.com"}
-              className="flex flex-row items-center gap-6 w-1/4 border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover bg-white bg-opacity-0 backdrop-blur-md"
+              className="contact-link"
             >
-              <FaEnvelopeOpenText className="text-5xl text-red-600  cursor-pointer" />
-              <h1 className="text-white text-lg">
-                Send me an <span className="text-red-600">e-mail</span>
+              <FaEnvelopeOpenText className="contact-link-email" />
+              <h1 className="contact-link-text">
+                Send me an <span className="contact-link-text-email">e-mail</span>
               </h1>
             </Link>
             <Link
               href={"/Kaan-Kirman-CV.pdf"}
-              className="flex flex-row items-center gap-6 w-1/4 border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover bg-white bg-opacity-0 backdrop-blur-md"
+              className="contact-link"
             >
-              <FaFileDownload className="text-5xl text-yellow-600  cursor-pointer" />
-              <h1 className="text-white text-lg">
-                View my <span className="text-yellow-600">CV</span>
+              <FaFileDownload className="contact-link-resume" />
+              <h1 className="contact-link-text">
+                View my <span className="contact-link-text-resume">CV</span>
               </h1>
             </Link>
           </div>
         </div>
-
-        {/* <img
-          src="neon-city.png"
-          alt="neon city"
-          className="w-screen object-cover h-96"
-        ></img> */}
-
-        {/* <div className="flex w-1/2 mb-20 items-center justify-center mt-32">
-          <div
-            className="w-[500px] h-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border-2 border-purple-300 rounded-full bg-transparent shadow-animation "
-            style={{ boxShadow: "0 0 100px #9333ea" }}
-          >
-            <img
-              src="phone-img.png"
-              className="h-[580px] max-w-none mt-36 ml-10 "
-            />
-          </div>
-        </div> */}
       </motion.div>
     </div>
   );

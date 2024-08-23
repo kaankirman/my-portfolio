@@ -11,7 +11,6 @@
 
 body {
   font-family: 'CustomFont', sans-serif;
-
 }
 
 html {
@@ -22,21 +21,17 @@ html {
 }
 
 @keyframes shadowAnimate {
-
   50% {
     box-shadow: 0px 0px 30px #a855f7;
     opacity: 0.9;
   }
-
 }
 
 @keyframes shadowAnimateWhite {
-
   50% {
     box-shadow: 0px 0px 20px #fff;
     opacity: 0.9;
   }
-
 }
 
 @keyframes customBounce {
@@ -65,15 +60,11 @@ html {
   box-shadow: 0px 0px 3px white;
 }
 
-
-
-
 .contact-link-div {
   @apply transition duration-300 hover:scale-[1.1] hover:border-white cursor-pointer;
 }
 
 .text-animation {
-
   @apply relative;
 }
 
@@ -150,5 +141,344 @@ html {
   85% {
     width: 100%;
   }
+}
 
+/* New Named Classes */
+.flex-col-container {
+  @apply flex flex-col;
+}
+
+.flex-row-container {
+  @apply flex flex-row px-4 items-center h-[calc(100vh-96px)] justify-between max-w-[1280px] self-center gap-20;
+}
+
+.flex-col-content {
+  @apply flex flex-col w-[800px] min-w-[500px];
+}
+
+.text-large-white {
+  @apply text-7xl text-white drop-shadow-lg;
+}
+
+.text-medium-white {
+  @apply text-5xl text-white w-full;
+}
+
+.text-small-white {
+  @apply text-2xl text-white mt-6;
+}
+
+.flex-row-icons {
+  @apply flex flex-row transition duration-300 text-3xl text-white gap-4 mt-5;
+}
+
+.icon-link {
+  @apply hover:scale-125;
+}
+
+.icon-link-linkedin {
+  @apply hover:text-blue-600;
+}
+
+.icon-link-github {
+  @apply hover:text-purple-500;
+}
+
+.icon-link-instagram {
+  @apply hover:text-pink-700;
+}
+
+.icon-link-resume {
+  @apply hover:text-yellow-600;
+}
+
+.image-container {
+  @apply w-[500px] h-[500px] min-w-[500px] flex flex-row items-center justify-center overflow-hidden mr-4 border-2 border-purple-200 rounded-full bg-transparent shadow-animation cursor-default;
+}
+
+.image-style {
+  box-shadow: 0 0 100px #9333ea;
+}
+
+.image {
+  @apply h-[550px] max-w-none mt-16 ml-10;
+}
+
+.projects-container {
+  @apply flex flex-col self-center max-w-[1280px] h-[calc(100vh-96px)] pt-32;
+}
+
+.projects-title {
+  @apply text-7xl ml-8 text-white mb-8;
+}
+
+.project-card-div {
+  @apply flex flex-row gap-8;
+}
+
+.projects-column {
+  @apply flex flex-col w-1/2 gap-20 items-center;
+}
+
+.projects-column-padded {
+  @apply flex flex-col w-1/2 gap-20 items-center px-10;
+}
+
+.timeline-container {
+  @apply flex flex-col w-fit h-fit self-center pt-32;
+}
+
+.timeline-title {
+  @apply text-7xl text-white ml-20 mb-2;
+}
+
+.contact-container {
+  @apply h-fit w-screen flex flex-col self-center items-center mt-20;
+}
+
+.contact-content {
+  @apply flex flex-col items-center w-screen h-96 gap-10 pt-10 rounded-t-2xl overflow-hidden border-t-2 border-purple-300;
+}
+
+.contact-content-style {
+  background-image: url('/neon-city.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 30px #c084fc;
+}
+
+.contact-header {
+  @apply flex flex-col w-[1280px];
+}
+
+.contact-title {
+  @apply text-8xl text-white;
+  text-shadow: 0 0 30px #fff;
+}
+
+.contact-subtitle {
+  @apply text-purple-100 text-5xl;
+  text-shadow: 0 0 30px #7e22ce;
+}
+
+.contact-links {
+  @apply flex flex-row gap-10 justify-center w-[1280px] self-center;
+}
+
+.contact-link {
+  @apply flex flex-row items-center gap-6 w-1/4 border-2 px-4 py-2 rounded-lg border-white shadow-lg contact-link-div button-hover bg-white bg-opacity-0 backdrop-blur-md;
+}
+
+.contact-link-linkedin {
+  @apply text-5xl text-blue-600 cursor-pointer;
+}
+
+.contact-link-github {
+  @apply text-5xl text-purple-500 cursor-pointer;
+}
+
+.contact-link-email {
+  @apply text-5xl text-red-600 cursor-pointer;
+}
+
+.contact-link-resume {
+  @apply text-5xl text-yellow-600 cursor-pointer;
+}
+
+.contact-link-text {
+  @apply text-white text-lg;
+}
+
+.contact-link-text-linkedin {
+  @apply text-blue-600;
+}
+
+.contact-link-text-github {
+  @apply text-purple-500;
+}
+
+.contact-link-text-email {
+  @apply text-red-600;
+}
+
+.contact-link-text-resume {
+  @apply text-yellow-600;
+}
+
+.header-container {
+  @apply w-full h-24 rounded-b-lg flex items-center justify-center text-white sticky top-0 bg-white bg-opacity-10 backdrop-blur-md border-b-2 border-purple-200 shadow-lg shadow-purple-400 z-50;
+}
+
+.header-content {
+  @apply flex flex-row w-[1280px] items-center justify-between px-4;
+}
+
+.header-title {
+  @apply text-5xl hover:animate-pulse cursor-default;
+}
+
+.header-title-span {
+  @apply text-purple-200 bg-clip-text drop-shadow-lg;
+}
+
+.header-links {
+  @apply flex flex-row gap-5 text-3xl;
+}
+
+.header-link {
+  @apply transition duration-300 hover:text-purple-600 cursor-pointer hover:-translate-y-1;
+}
+
+.project-card {
+  @apply flex flex-row rounded-xl overflow-hidden w-[500px] border-2 transition duration-300 border-purple-300 items-center px-4 gap-7 hover:border-white hover:scale-110 button-hover;
+}
+
+.project-card-link-div {
+  @apply flex flex-col
+}
+
+.project-card-link {
+  @apply text-3xl text-white cursor-pointer transition duration-300 hover:text-purple-600 hover:translate-x-1 animate-pulse;
+}
+
+.project-card-divider {
+  @apply w-[2px] h-16 bg-white;
+}
+
+.project-card-name {
+  @apply text-2xl text-white;
+}
+
+@media (max-width: 640px) {
+  .project-card-div {
+    @apply flex flex-col gap-6;
+  }
+  .projects-column,
+  .projects-column-padded {
+    @apply w-full px-4 gap-6;
+  }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 1280px) {
+  .flex-row-container {
+    @apply flex-col items-center justify-center gap-10;
+  }
+
+  .flex-col-content {
+    @apply w-full min-w-0;
+  }
+
+  .text-large-white {
+    @apply text-5xl;
+  }
+
+  .text-medium-white {
+    @apply text-3xl;
+  }
+
+  .text-small-white {
+    @apply text-xl;
+  }
+
+  .flex-row-icons {
+    @apply text-3xl gap-2 mt-2;
+  }
+
+  .image-container {
+    @apply w-[300px] h-[300px] min-w-0;
+  }
+
+  .image {
+    @apply h-[350px] mt-8 ml-0;
+  }
+
+  .projects-container {
+    @apply h-auto pt-16 w-full;
+  }
+
+  .projects-title {
+    @apply text-5xl ml-4 mb-4;
+  }
+
+  .project-card-div {
+    @apply gap-6;
+  }
+
+  .projects-column,
+  .projects-column-padded {
+    @apply w-full px-4 gap-6;
+  }
+
+  .timeline-container {
+    @apply pt-16;
+  }
+
+  .timeline-title {
+    @apply text-5xl ml-5 mb-1;
+  }
+
+  .contact-container {
+    @apply mt-10;
+  }
+
+  .contact-content {
+    @apply h-auto gap-5 pt-5;
+  }
+
+  .contact-header {
+    @apply w-full pl-5;
+  }
+
+  .contact-title {
+    @apply text-5xl;
+  }
+
+  .contact-subtitle {
+    @apply text-3xl;
+  }
+
+  .contact-links {
+    @apply flex-col gap-5 w-full px-5;
+  }
+
+  .contact-link {
+    @apply w-full;
+  }
+
+  .header-container {
+    @apply h-16;
+  }
+
+  .header-content {
+    @apply flex-row items-center self-center justify-center w-fit px-4;
+  }
+
+  .header-title {
+    @apply hidden;
+  }
+
+  .header-links {
+    @apply flex-row gap-2 text-3xl;
+  }
+
+  .project-card {
+    @apply flex-col w-full gap-0 rounded-2xl;
+  }
+
+  .project-card-link-div {
+    @apply flex-row gap-2;
+  }
+
+  .project-card-link {
+    @apply text-xl;
+  }
+
+  .project-card-divider {
+    @apply w-1/2 h-[2px];
+  }
+
+  .project-card-name {
+    @apply text-xl mb-3;
+  }
 }
