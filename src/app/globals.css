@@ -173,7 +173,7 @@ html {
 }
 
 .icon-link {
-  @apply hover:scale-125;
+  @apply hover:scale-125 transition duration-300;
 }
 
 .icon-link-linkedin {
