@@ -362,7 +362,7 @@ html {
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 1280px) {
   .flex-row-container {
-    @apply flex-col items-center justify-center gap-10;
+    @apply flex-col items-center h-fit justify-center gap-10 pt-10
   }
 
   .flex-col-content {
