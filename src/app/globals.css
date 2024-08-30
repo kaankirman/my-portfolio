@@ -334,11 +334,16 @@ html {
 }
 
 .project-card-link-div {
-  @apply flex flex-col
+  @apply flex flex-col gap-2
 }
 
 .project-card-link {
-  @apply text-3xl text-white cursor-pointer transition duration-300 hover:text-purple-600 hover:translate-x-1 animate-pulse;
+  box-shadow: 0 0 15px #9333ea;
+  @apply text-3xl text-white cursor-pointer transition duration-300 self-center px-2 rounded-lg bg-white border border-purple-200 bg-opacity-10 hover:scale-110 ;
+}
+
+.project-card-link:hover {
+  @apply shadow-animation-purple;
 }
 
 .project-card-divider {

@@ -32,6 +32,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         width={200}
         style={{ cursor: "default" }}
       />
+      <h1
+        className="project-card-name"
+        style={{ textShadow: "0 0 30px #7e22ce" }}
+      >
+        {name}
+      </h1>
+
+      <div
+        className="project-card-divider"
+        style={{ boxShadow: "0 0 10px #9333ea" }}
+      >
+        {" "}
+      </div>
       <div className="project-card-link-div">
         <Link href={web} className="project-card-link">
           Web
@@ -42,15 +55,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </Link>
         )}
       </div>
-      <div
-        className="project-card-divider"
-        style={{ boxShadow: "0 0 10px #9333ea" }}
-      >
-        {" "}
-      </div>
-      <h1 className="project-card-name" style={{ textShadow: "0 0 30px #7e22ce" }}>
-        {name}
-      </h1>
     </div>
   );
 };
