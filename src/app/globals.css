@@ -476,7 +476,7 @@ html {
   }
 
   .project-card-link {
-    @apply text-xl;
+    @apply text-xl my-2;
   }
 
   .project-card-divider {
@@ -484,6 +484,6 @@ html {
   }
 
   .project-card-name {
-    @apply text-xl mb-3;
+    @apply text-xl my-1;
   }
 }
