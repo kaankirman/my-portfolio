@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Analytics/>
-      <body id="about" className="bg-neutral-900">
+      <body id="about" className="bg-neutral-900 relative">
         <div className="header-container">
           <div className="header-content">
             <h1 className="header-title">
@@ -48,6 +48,11 @@ export default function RootLayout({
           </div>
         </div>
         {children}
+        <iframe
+          src="https://ajanai-test.k2msoftware.com/embed"
+          className="fixed bottom-4 right-4 w-[400px] h-[500px] bg-transparent rounded-lg overflow-hidden"
+          style={{ zIndex: 1000 }}
+        />
       </body>
     </html>
   );
