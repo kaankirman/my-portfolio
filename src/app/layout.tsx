@@ -48,11 +48,7 @@ export default function RootLayout({
           </div>
         </div>
         {children}
-        <iframe
-          src="https://ajanai-test.k2msoftware.com/embed"
-          className="fixed bottom-4 right-4 w-[400px] h-[500px] bg-transparent rounded-lg overflow-hidden"
-          style={{ zIndex: 1000 }}
-        />
+        
       </body>
     </html>
   );
