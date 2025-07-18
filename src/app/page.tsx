@@ -203,23 +203,19 @@ export default function Page() {
                 color: "#fff",
                 boxShadow: "0 0 30px #a855f7",
               }}
-              contentArrowStyle={{ borderRight: "7px solid  #9333ea" }}
-              date="Dec 2023 - present"
+              contentArrowStyle={{ borderRight: "7px solid #9333ea" }}
+              date="Sep 2024 - present"
               dateClassName="text-white"
               iconStyle={{ background: "#9333ea", color: "#fff" }}
             >
               <h3 className="vertical-timeline-element-title text-4xl">
-                Freelancer
+                Fullstack Developer at K2M Yazilim
               </h3>
               <h4 className="vertical-timeline-element-subtitle text-2xl">
                 İzmir, Turkey
               </h4>
               <h1 className="text-lg">
-                Developed and maintained websites for clients, ensuring optimal
-                performance and user experience. Collaborated with clients to
-                identify and address issues, ensuring satisfaction and repeat
-                business. Utilized HTML, CSS, TypeScript, React and Next.js to
-                create responsive, user-friendly websites.
+                Mainly working as a fullstack developer using Next.js and TypeScript to build and maintain web applications related to PBX systems like 3CX. I also use .NET and C# as needed for integrations with 3CX, focusing on practical solutions to support communication features. I collaborate with my team to deliver reliable and maintainable applications, and I am always learning to improve my skills and contribute to the company's goals.
               </h1>
             </VerticalTimelineElement>
             {timelineData.map((data, index) => (

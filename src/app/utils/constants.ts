@@ -44,6 +44,13 @@ export const projectsColTwo = [
 
 export const timelineData = [
   {
+    title: "Freelancer",
+    subtitle: "İzmir, Turkey",
+    date: "Dec 2023 - Sep 2024",
+    description:
+      "Developed and maintained websites for clients, ensuring optimal performance and user experience. Collaborated with clients to identify and address issues, ensuring satisfaction and repeat business. Utilized HTML, CSS, TypeScript, React, and Next.js to create responsive, user-friendly websites.",
+  },
+  {
     title: "Student",
     subtitle: "İzmir, Turkey",
     date: "Oct 2023 - Dec 2023",
